@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amőba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!--Retro-->
+</head>
+<body>
+  <h1 id="title"></h1> <!--Ni༼ つ ◕_◕ ༽つgga-->
+
+  <div class="config">
+    <label>
+      Játékos 1 neve:
+        <input type="text" id="player1" placeholder="Játékos 1" />
+    </label>
+    <label>
+      Játékos 2 / Bot neve:
+      <input type="text" id="player2" placeholder="Játékos 2 / Bot" />
+    </label>
+    <label>
+      Játékmód:
+      <select id="gameMode">
+        <option value="player">Játékos vs Játékos</option>
+        <option value="bot">Játékos vs Bot</option>
+      </select>
+    </label>
+    <button id="startBtn">Játék indítása</button>
+  </div>
+  <div class="wrap" id="wrap" style="display: none;">
+  <div class="scoreboard">
+    <span id="scoreX">Játékos 1: 0</span>
+    <span id="scoreO">Játékos 2: 0</span>
+  </div>
+  <div class="status">
+    <span id="currentTurn">Következő: X</span>
+    <button id="resetBtn">Új játék</button>
+  </div>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="popup-message"></span>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+  
+
+  <div id="grid" class="grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
